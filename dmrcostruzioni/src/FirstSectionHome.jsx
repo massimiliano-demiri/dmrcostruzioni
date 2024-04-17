@@ -1,59 +1,74 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import videoBackground from './immagini/video_first_section.mp4'; // Importa il video di sfondo
 
-const HeaderCarousel = () => {
+const FirstSectionHome = () => {
   return (
-    <div className="relative bg-gray-800">
-      {/* Box trasparente sopra lo slider */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 rounded-lg p-8 bg-white bg-opacity-50 shadow-lg">
-        <h1 className="text-gray-800 text-xl font-semibold text-center">La tua impresa edile a Terni</h1>
+    <div className="relative h-screen overflow-hidden bg-9dcf4c"> {/* Imposta lo sfondo con il colore #9dcf4c e l'altezza dello schermo */}
+      {/* Video Background */}
+      <div className="fixed inset-0 z-0 overflow-hidden" style={{ zIndex: -1 }}> {/* Applica posizionamento fisso al contenitore del video */}
+        <video autoPlay loop muted className="w-full h-full object-cover blur-sm max-h-screen"> {/* Imposta l'ampiezza e l'altezza a pieno schermo e applica object-cover */}
+          <source src={videoBackground} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
-      {/* Slide delle immagini */}
-      <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false} className="z-0" stopOnHover={false}>
-        <div>
-          <div className="relative">
-            <svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto absolute bottom-0 left-0 z-10">
-              <path d="M0,10 Q15,15 30,10 Q45,5 60,10 Q75,15 100,10 L100,20 L0,20 Z" fill="#718096" />
-            </svg>
-            <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1" style={{ maxHeight: "calc(100vh - 100px)" }} />
-          </div>
+      {/* Contenuto sopra il video */}
+      <div className="relative z-10 flex flex-col justify-center items-center h-full">
+        {/* Text Overlay */}
+        <div className="flex flex-col items-center text-white font-montserrat uppercase">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center font-bold">
+            <span className="text-7xl sm:text-6xl lg:text-7xl font-bold">DMR COSTRUZIONI</span> <br /> Impresa edile a Terni
+          </h1>
         </div>
-        <div>
-          <div className="relative">
-            <svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto absolute bottom-0 left-0 z-10">
-              <path d="M0,10 Q15,15 30,10 Q45,5 60,10 Q75,15 100,10 L100,20 L0,20 Z" fill="#718096" />
-            </svg>
-            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" style={{ maxHeight: "calc(100vh - 100px)" }} />
-          </div>
-        </div>
-        <div>
-          <div className="relative">
-            <svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto absolute bottom-0 left-0 z-10">
-              <path d="M0,10 Q15,15 30,10 Q45,5 60,10 Q75,15 100,10 L100,20 L0,20 Z" fill="#718096" />
-            </svg>
-            <img src="https://images.unsplash.com/photo-1571843439991-dd2b8e051966?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3" style={{ maxHeight: "calc(100vh - 100px)" }} />
-          </div>
-        </div>
-      </Carousel>
-
-      {/* Div sottostante con sfondo grigio */}
-      <div className="absolute bottom-0 left-0 w-full bg-gray-800 p-8">
-        <p className="text-white">
-          La Tosca SRL da oltre 70 anni si occupa di costruzioni, manutenzione e ristrutturazione edile.
-          Grazie all'esperienza, maturata nelle 3 generazioni di attività della famiglia Tosto, e alla passione e la serietà,
-          che contraddistinguono il modo di lavorare dell’azienda, la Tosca SRL si è presto contraddistinta come punto di riferimento
-          per ogni intervento nell'edilizia a Firenze e hinterland.
-        </p>
-        <p className="text-white">
-          La Tosca SRL è specializzata negli interventi di piccoli e grandi restauri e nella manutenzione globale degli edifici,
-          dal restauro architettonico degli esterni e delle facciate degli edifici alla semplice tinteggiatura esterna con prodotti
-          garantiti da garanzia ultra decennale, per offrirvi sempre un servizio a 360 gradi.
-        </p>
       </div>
+
+      {/* Links */}
+      <div className="absolute bottom-6 left-0 right-0 flex justify-center z-10">
+        {/* Your links here */}
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://svgstorm.com"
+          viewBox = "0 0 1920 238"
+          width="1920"
+          height="238"
+          style={{ position: 'absolute', bottom: 0, left: 0, zIndex: 10 }}
+            >
+
+          <g fill="None" fill-opacity="0.0" stroke="#90C63D" stroke-opacity="0.06" stroke-width="0.3">
+            <path d="
+              M 0.00 12.00 
+              C 49.37 38.11 92.38 57.23 145.22 76.78 C 198.07 96.32 248.93 112.13 305.67 126.33 C 362.41 140.52 423.14 151.35 484.00 159.00 C 544.86 166.64 620.39 169.46 684.00 167.00 C 747.62 164.54 812.54 157.10 873.02 145.02 C 933.51 132.95 981.69 116.61 1042.07 104.07 C 1102.46 91.54 1167.41 84.90 1231.00 82.00 C 1294.59 79.10 1370.15 82.81 1431.07 89.93 C 1492.00 97.04 1552.60 108.39 1609.22 122.78 C 1665.85 137.17 1716.98 152.26 1769.68 172.32 C 1822.37 192.38 1866.26 211.09 1915.00 238.00
+              L 1920.00 238.00
+              L 1920.00 0.00
+              L 0.00 0.00
+              L 0.00 12.00 Z"/>
+          </g>
+          <g fill="None" fill-opacity="0.0" stroke="#90C63D" stroke-opacity="1.00" stroke-width="0.3">
+            <path d="
+              M 0.00 238.00 
+              L 1915.00 238.00
+              C 1866.26 211.09 1822.37 192.38 1769.68 172.32 C 1716.98 152.26 1665.85 137.17 1609.22 122.78 C 1552.60 108.39 1492.00 97.04 1431.07 89.93 C 1370.15 82.81 1294.59 79.10 1231.00 82.00 C 1167.41 84.90 1102.46 91.54 1042.07 104.07 C 981.69 116.61 933.51 132.95 873.02 145.02 C 812.54 157.10 747.62 164.54 684.00 167.00 C 620.39 169.46 544.86 166.64 484.00 159.00 C 423.14 151.35 362.41 140.52 305.67 126.33 C 248.93 112.13 198.07 96.32 145.22 76.78 C 92.38 57.23 49.37 38.11 0.00 12.00
+              L 0.00 238.00 Z"/>
+          </g>
+          <g fill="#90C63D" fill-opacity="0.06" stroke="None">
+            <path d="
+              M 0.00 12.00 
+              C 49.37 38.11 92.38 57.23 145.22 76.78 C 198.07 96.32 248.93 112.13 305.67 126.33 C 362.41 140.52 423.14 151.35 484.00 159.00 C 544.86 166.64 620.39 169.46 684.00 167.00 C 747.62 164.54 812.54 157.10 873.02 145.02 C 933.51 132.95 981.69 116.61 1042.07 104.07 C 1102.46 91.54 1167.41 84.90 1231.00 82.00 C 1294.59 79.10 1370.15 82.81 1431.07 89.93 C 1492.00 97.04 1552.60 108.39 1609.22 122.78 C 1665.85 137.17 1716.98 152.26 1769.68 172.32 C 1822.37 192.38 1866.26 211.09 1915.00 238.00
+              L 1920.00 238.00
+              L 1920.00 0.00
+              L 0.00 0.00
+              L 0.00 12.00 Z"/>
+          </g>
+          <g fill="#90C63D" fill-opacity="1.00" stroke="None">
+            <path d="
+              M 0.00 238.00 
+              L 1915.00 238.00
+              C 1866.26 211.09 1822.37 192.38 1769.68 172.32 C 1716.98 152.26 1665.85 137.17 1609.22 122.78 C 1552.60 108.39 1492.00 97.04 1431.07 89.93 C 1370.15 82.81 1294.59 79.10 1231.00 82.00 C 1167.41 84.90 1102.46 91.54 1042.07 104.07 C 981.69 116.61 933.51 132.95 873.02 145.02 C 812.54 157.10 747.62 164.54 684.00 167.00 C 620.39 169.46 544.86 166.64 484.00 159.00 C 423.14 151.35 362.41 140.52 305.67 126.33 C 248.93 112.13 198.07 96.32 145.22 76.78 C 92.38 57.23 49.37 38.11 0.00 12.00
+              L 0.00 238.00 Z"/>
+          </g>
+        </svg>
+        {/* <FirstSectionHome /> */}
     </div>
   );
 };
 
-export default HeaderCarousel;
+export default FirstSectionHome;

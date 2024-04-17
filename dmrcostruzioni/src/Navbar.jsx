@@ -5,7 +5,7 @@ const Navbar = () => {
   const isHome = window.location.pathname === '/'; // Controlla se siamo nella home
 
   return (
-    <div className="bg-gradient-to-r from-a0c959 to-3a393f">
+    <div className="bg-white w-full z-50"> {/* Imposta la navbar in alto con posizione fissa */}
       {/* Logo Container */}
       <div className="flex justify-center items-center h-36 mb-4"> {/* Riduci lo spazio verticale a h-48 */}
         <img src={logo} alt="Logo" className="h-21" /> {/* Aumenta la dimensione del logo a h-24 */}
@@ -17,29 +17,33 @@ const Navbar = () => {
           <div className="flex justify-center py-1"> {/* Riduci lo spazio verticale a py-4 */}
             {/* Links */}
             <div className="flex items-center space-x-6"> {/* Aumenta il gap tra le scritte a space-x-6 */}
-              <a href="#" className={`px-4 py-3 rounded-md text-lg relative ${isHome ? 'hover:bg-95ca3a' : ''}`}>
-                <span className={isHome ? 'bg-95ca3a absolute inset-0 opacity-75 transition duration-200' : 'hover:bg-95ca3a absolute inset-0 opacity-75 transition duration-200'}></span>
-                <span className="relative z-10">Home</span>
+              <a href="#" className={`px-4 py-3 rounded-md text-sm font-montserrat uppercase relative ${isHome ? 'hover:text-gray-300' : ''}`}>
+                <span className={isHome ? 'opacity-75 transition duration-200' : 'opacity-75 transition duration-200'}></span>
+                <span className="relative z-10">HOME</span>
               </a>
-              <a href="#" className="hover:bg-green-400 px-4 py-3 rounded-md text-lg relative">
-                <span className="hover:bg-95ca3a absolute inset-0 opacity-75 transition duration-200"></span>
-                <span className="relative z-10">Chi siamo</span>
+              <a href="#" className="hover:text-gray-300 px-4 py-3 rounded-md text-sm font-montserrat uppercase relative">
+                <span className="opacity-75 transition duration-200"></span>
+                <span className="relative z-10">AZIENDA</span>
               </a>
-              <a href="#" className="hover:bg-green-400 px-4 py-3 rounded-md text-lg relative">
-                <span className="hover:bg-95ca3a absolute inset-0 opacity-75 transition duration-200"></span>
-                <span className="relative z-10">Servizi</span>
+              <a href="#" className="hover:text-gray-300 px-4 py-3 rounded-md text-sm font-montserrat uppercase relative">
+                <span className="opacity-75 transition duration-200"></span>
+                <span className="relative z-10">COSTRUZIONI</span>
               </a>
-              <a href="#" className="hover:bg-green-400 px-4 py-3 rounded-md text-lg relative">
-                <span className="hover:bg-95ca3a absolute inset-0 opacity-75 transition duration-200"></span>
-                <span className="relative z-10">Sanificazioni</span>
+              <a href="#" className="hover:text-gray-300 px-4 py-3 rounded-md text-sm font-montserrat uppercase relative">
+                <span className="opacity-75 transition duration-200"></span>
+                <span className="relative z-10">RISTRUTTURAZIONI</span>
               </a>
-              <a href="#" className="hover:bg-green-400 px-4 py-3 rounded-md text-lg relative">
-                <span className="hover:bg-95ca3a absolute inset-0 opacity-75 transition duration-200"></span>
-                <span className="relative z-10">I nostri lavori</span>
+              <a href="#" className="hover:text-gray-300 px-4 py-3 rounded-md text-sm font-montserrat uppercase relative">
+                <span className="opacity-75 transition duration-200"></span>
+                <span className="relative z-10">GALLERIA</span>
               </a>
-              <a href="#" className="hover:bg-green-400 px-4 py-3 rounded-md text-lg relative">
-                <span className="hover:bg-95ca3a absolute inset-0 opacity-75 transition duration-200"></span>
-                <span className="relative z-10">Contatti</span>
+              <a href="#" className="hover:text-gray-300 px-4 py-3 rounded-md text-sm font-montserrat uppercase relative">
+                <span className="opacity-75 transition duration-200"></span>
+                <span className="relative z-10">OFFERTE</span>
+              </a>
+              <a href="#" className="hover:text-gray-300 px-4 py-3 rounded-md text-sm font-montserrat uppercase relative">
+                <span className="opacity-75 transition duration-200"></span>
+                <span className="relative z-10">CONTATTI</span>
               </a>
             </div>
           </div>

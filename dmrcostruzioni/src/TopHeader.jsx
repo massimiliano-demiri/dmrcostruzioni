@@ -3,19 +3,19 @@ import { IoLogoFacebook, IoLogoTwitter, IoLogoInstagram } from 'react-icons/io5'
 
 const Banner = () => {
   return (
-    <div className="bg-white text-black py-2 px-8 flex justify-center items-center gap-40">
-      {/* Testo a sinistra */}
-      <div className="flex items-center space-x-4"> {/* Updated */}
+    <div style={{ backgroundColor: "#ffffff" }} className="text-black py-2 px-8 flex justify-between items-center">
+      {/* Contenitore dei contatti */}
+      <div className="flex items-center space-x-8 ml-8 flex-grow"> {/* Margini e spazio aggiunto */}
         <p className="text-sm mb-0">
-          Prenotate un appuntamento al <a href="tel:+390556121290"><b>+39 055 6121 290</b></a> | <a href="mailto:s.demiri@hotmail.it"><b>s.demiri@hotmail.it</b></a>
+          Prenotate un appuntamento al <a href="tel:+393398438160" className="text-black font-bold"><b>+39 3398438160</b></a> | <a href="mailto:s.demiri@hotmail.it" className="text-black font-bold"><b>s.demiri@hotmail.it</b></a>
         </p>
       </div>
       
-      {/* Icone social a destra */}
-      <div className="flex space-x-2">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><IoLogoFacebook className="text-xl" /></a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><IoLogoTwitter className="text-xl" /></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><IoLogoInstagram className="text-xl" /></a>
+      {/* Contenitore dei social media */}
+      <div className="flex items-center space-x-4 mr-8"> {/* Margini aggiunti */}
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><IoLogoFacebook className="text-lg" /></a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><IoLogoTwitter className="text-lg" /></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><IoLogoInstagram className="text-lg" /></a>
       </div>
     </div>
   );

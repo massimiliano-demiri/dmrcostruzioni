@@ -1,49 +1,83 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import Counter from "./Counter";
 
-const CompanyInfo = () => {
-    const companyInfo = {
-        name: "Your Construction Company",
-        yearFounded: 1965,
-        mission: "To 'do well' and become a reliable reference for your most challenging projects.",
-        stats: {
-            asphaltPosato: "1.74 mila m³",
-            binder: "183 mila m³",
-            stratoDiBase: "117 mila m³",
-            collaborators: "212 units",
-            areasDemolite: "990 mila m³"
-        },
-        revenue2023: "58.3"
-    };
+const TwoSectionLayout = () => {
+  // Stato e funzione per gestire il contatore nella seconda sezione
+  const [secondSectionCounter, setSecondSectionCounter] = useState(0);
 
-    return (
-        <div className="bg-white p-8 rounded-xl shadow-md">
-            <div className="flex justify-between items-center mb-6">
-                <h1 className="text-3xl font-semibold text-gray-800">{companyInfo.name}</h1>
-                <div className="text-gray-600">
-                    <p className="text-sm">Founded: {companyInfo.yearFounded}</p>
-                    <p className="text-sm">Mission: {companyInfo.mission}</p>
-                </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-                <div>
-                    <h2 className="text-lg font-semibold text-gray-800 mb-2">Statistics</h2>
-                    <ul className="list-inside space-y-1">
-                        <li className="text-gray-600">Asphalt posato: {companyInfo.stats.asphaltPosato}</li>
-                        <li className="text-gray-600">Binder: {companyInfo.stats.binder}</li>
-                        <li className="text-gray-600">Strato di base: {companyInfo.stats.stratoDiBase}</li>
-                        <li className="text-gray-600">Collaborators: {companyInfo.stats.collaborators}</li>
-                        <li className="text-gray-600">Areas demolite: {companyInfo.stats.areasDemolite}</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 className="text-lg font-semibold text-gray-800 mb-2">Financial Data</h2>
-                    <ul className="list-inside space-y-1">
-                        <li className="text-gray-600">Revenue 2023: {companyInfo.revenue2023}</li>
-                    </ul>
-                </div>
-            </div>
+  // Funzione per incrementare il contatore della seconda sezione fino a 243
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (secondSectionCounter < 243) {
+        setSecondSectionCounter(prevCounter => prevCounter + 1);
+      }
+    }, 10);
+
+    return () => clearInterval(interval);
+  }, [secondSectionCounter]);
+
+  // Array di dati per le colonne della seconda sezione
+  const columnsData = [
+    { label: "Aree Demolite", targetNumber: 665, backgroundColor: "#F4F4F4" },
+    { label: "Nuove Costruzioni:", targetNumber: 112, backgroundColor: "#F4F4F4" },
+    { label: "Ristrutturazioni:", targetNumber: 64, backgroundColor: "#F4F4F4" },
+    { label: "Collaboratori", targetNumber: 44, backgroundColor: "#F4F4F4" },
+    { label: "Clienti Soddisfatti", targetNumber: 229, backgroundColor: "#F4F4F4" }
+  ];
+
+  return (
+    <div style={{ display: "flex", gap:'10px', flexDirection: "column", height: "100vh", backgroundColor: '#F4F4F4', margin: '0 150px 0 150px' }}>
+      {/* Prima sezione */}
+      <div style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '15px 0', marginLeft: '-10px', height:'100%' }}>
+        {/* Colonna "Chi siamo?" */}
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginRight: '20px' }}>
+          <h6 style={{ fontFamily: 'Muli', lineHeight: '1em', letterSpacing: '.02em', color: '#36BCB7', fontSize: '20px', textTransform: 'none', margin: '0', transform: 'rotate(-90deg)', whiteSpace: 'nowrap', marginBottom: '100px' }}>Chi siamo?</h6>
         </div>
-    );
+        {/* Colonna "Scopri la nostra" */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', marginLeft: '-30px' }}>
+          <h2 style={{ color: '#616163', fontFamily: 'Muli', fontSize: '45px', marginBottom: '1px', textAlign: 'left' }}>Scopri la nostra</h2>
+          <h2 style={{ color: '#616163', fontFamily: 'Russo One', fontSize: '45px', marginBottom: '1px', textAlign: 'left' }}>IMPRESA DI</h2>
+          <h2 style={{ color: '#616163', fontFamily: 'Russo One', fontSize: '45px', marginBottom: '1px', textAlign: 'left' }}>COSTRUZIONI</h2>
+          <h2 style={{ color: '#96C940', fontFamily: 'Muli', fontSize: '15px', textAlign: 'left' }}>SCOPRI
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#96C940"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{ marginLeft: '0.5rem' }}
+            >
+              <path d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </h2>
+        </div>
+        {/* Colonna centrale con counter */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: "#F4F4F4", padding: '20px 0' }}>
+          <h6 style={{ fontFamily: 'Muli', lineHeight: '1em', letterSpacing: '.02em', color: '#36BCB7', fontSize: '20px', textTransform: 'none', margin: '0', whiteSpace: 'nowrap', marginBottom: '10px' }}>Lavori terminati: </h6>
+          <Counter targetNumber={243} />
+        </div>
+        {/* Terza colonna */}
+        <div style={{ flex: 1, backgroundColor: "F4F4F4", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '20px', textAlign: 'left' }}>
+          <p style={{ fontFamily: 'Muli', fontSize: '20px', color: '#616163' }}>Fin dal 2005, a guidarci è la voglia di “fare bene” e di diventare un referente affidabile per i tuoi progetti più impegnativi.</p>
+        </div>
+      </div>
+
+       {/* Seconda sezione */}
+       <div style={{ display: "flex", flexDirection: "row", height: "50%", backgroundColor: '#F4F4F4' }}>
+        {/* Mapping delle colonne */}
+        {columnsData.map((column, index) => (
+          <div key={index} style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '20px 0' }}>
+            <h6 style={{ fontFamily: 'Muli', lineHeight: '1em', letterSpacing: '.02em', color: '#36BCB7', fontSize: '20px', textTransform: 'none', margin: '0', whiteSpace: 'nowrap', marginBottom: '10px' }}>{column.label}</h6>
+            <Counter targetNumber={column.targetNumber} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default CompanyInfo;
+export default TwoSectionLayout;

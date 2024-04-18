@@ -1,0 +1,44 @@
+.hover-text-green-500:hover {
+    color:#90C63D  !important;
+  }
+  .hover-underline:hover {
+    text-decoration: underline;
+  }
+
+  .nav-link {
+  font-family: 'Muli', sans-serif;
+  font-size: 180px;
+  font-weight: 400;
+  color: #90C63D;
+}
+
+.nav-link span {
+    position: relative;
+    z-index: 1;
+    color: #90C63D;
+  }
+  
+  .nav-link .line-before,
+  .nav-link .line-after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #90C63D; /* Cambiamo il colore di sfondo qui */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link .line-before {
+    left: 0;
+  }
+  
+  .nav-link .line-after {
+    right: 0;
+  }
+  
+  .nav-link:hover .line-before,
+  .nav-link:hover .line-after {
+    width: 50%;
+  }
+  

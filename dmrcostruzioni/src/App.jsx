@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from "./Navbar"
 import TopHeader from "./TopHeader"
-import Curva from "./Curva"
+
 import FirstSectionHome from "./FirstSectionHome"
 import SecondSectionHome from './SecondSectionHome';
 import ThirdSectionHome from './ThirdSectionHome';
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <TopHeader />
+      {/* <TopHeader /> */}
       <div style={{ paddingTop: navbarHeight }}> {/* Aggiungi lo spazio sopra al contenuto principale */}
         <Navbar scrollPosition={scrollPosition} />
         <FirstSectionHome />

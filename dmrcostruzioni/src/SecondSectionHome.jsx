@@ -1,66 +1,49 @@
 import React from 'react';
 
-const useStyles = () => {
-  const titleFontFamily = 'Montserrat'; // Font-family per il titolo
-  const titleFontSize = '30px'; // Dimensione del font-size del titolo
-  const paragraphFontSize = '16px'; // Dimensione del font-size del paragrafo
-  const padding = '60px'; // Increased padding
-  const marginBottom = '20px';
-  const borderColor = '#84b73d';
+const CompanyInfo = () => {
+    const companyInfo = {
+        name: "Your Construction Company",
+        yearFounded: 1965,
+        mission: "To 'do well' and become a reliable reference for your most challenging projects.",
+        stats: {
+            asphaltPosato: "1.74 mila m³",
+            binder: "183 mila m³",
+            stratoDiBase: "117 mila m³",
+            collaborators: "212 units",
+            areasDemolite: "990 mila m³"
+        },
+        revenue2023: "58.3"
+    };
 
-  return {
-    customDivWrapper: {
-      width: '100%', // Larghezza al 100% della pagina
-      height: '316px', // Altezza desiderata
-      margin: '0 auto', // Per centrare il contenuto
-      backgroundColor: '#90c63d', // Colore di sfondo per estendere su tutta la pagina
-      display: 'flex', // Imposta il display a flex per allineare verticalmente il contenuto
-      justifyContent: 'center', // Centra il contenuto orizzontalmente
-      alignItems: 'center', // Centra il contenuto verticalmente
-      boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Aggiunge un'ombra leggera
-    },
-    customDiv: {
-      color: 'white',
-      padding: padding,
-      textAlign: 'center',
-      fontFamily: 'Roboto', // Font-family per tutto tranne il titolo
-      borderRadius: '5px',
-      maxWidth: '986px', // Larghezza desiderata per il wrapper del testo
-      width: '100%', // Larghezza al 100% del wrapper del testo
-    },
-    title: {
-      fontSize: titleFontSize,
-      marginBottom: '10px',
-      fontFamily: titleFontFamily, // Applica il font-family specifico al titolo
-      textShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)', // Aggiunge un'ombra leggera al titolo
-    },
-    paragraph: {
-      fontSize: paragraphFontSize,
-      margin: 0,
-      fontWeight: 'normal', // Imposta il font-weight a normale
-    },
-    boldKeyword: {
-      fontWeight: 'bold', // Imposta il font-weight a bold per le parole chiave
-    },
-  };
+    return (
+        <div className="bg-white p-8 rounded-xl shadow-md">
+            <div className="flex justify-between items-center mb-6">
+                <h1 className="text-3xl font-semibold text-gray-800">{companyInfo.name}</h1>
+                <div className="text-gray-600">
+                    <p className="text-sm">Founded: {companyInfo.yearFounded}</p>
+                    <p className="text-sm">Mission: {companyInfo.mission}</p>
+                </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+                <div>
+                    <h2 className="text-lg font-semibold text-gray-800 mb-2">Statistics</h2>
+                    <ul className="list-inside space-y-1">
+                        <li className="text-gray-600">Asphalt posato: {companyInfo.stats.asphaltPosato}</li>
+                        <li className="text-gray-600">Binder: {companyInfo.stats.binder}</li>
+                        <li className="text-gray-600">Strato di base: {companyInfo.stats.stratoDiBase}</li>
+                        <li className="text-gray-600">Collaborators: {companyInfo.stats.collaborators}</li>
+                        <li className="text-gray-600">Areas demolite: {companyInfo.stats.areasDemolite}</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 className="text-lg font-semibold text-gray-800 mb-2">Financial Data</h2>
+                    <ul className="list-inside space-y-1">
+                        <li className="text-gray-600">Revenue 2023: {companyInfo.revenue2023}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
 };
 
-const CustomDiv = () => {
-  const styles = useStyles();
-
-  return (
-    <div style={styles.customDivWrapper}>
-      <div style={styles.customDiv}>
-        <h4 style={styles.title}>Esperienza e Professionalità da oltre 30 anni</h4>
-        <p style={styles.paragraph}>
-          DMR Costruzioni offre servizi di costruzioni, manutenzione e <span style={styles.boldKeyword}>ristrutturazione</span> edile. Grazie all'<span style={styles.boldKeyword}>esperienza</span>, maturata nelle 3 generazioni di attività della famiglia Demiri, e alla <span style={styles.boldKeyword}>passione</span> e la <span style={styles.boldKeyword}>serietà</span>, che contraddistinguono il modo di lavorare dell'azienda, DMR Costruzioni si è presto contraddistinta come punto di riferimento per ogni intervento nell'edilizia a Terni e hinterland.
-        </p>
-        <p style={styles.paragraph}>
-          DMR Costruzioni è specializzata negli interventi di piccoli e grandi restauri e nella manutenzione globale degli edifici, dal <span style={styles.boldKeyword}>restauro</span> architettonico degli esterni e delle facciate degli edifici alla semplice tinteggiatura esterna con prodotti garantiti da garanzia ultra decennale, per offrirvi sempre un servizio a 360 gradi.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export default CustomDiv;
+export default CompanyInfo;

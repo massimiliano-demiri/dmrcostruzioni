@@ -5,6 +5,7 @@ import TopHeader from "./TopHeader"
 import FirstSectionHome from "./FirstSectionHome"
 import SecondSectionHome from './SecondSectionHome';
 import ThirdSectionHome from './ThirdSectionHome';
+import FourthSection from './FourthSection'
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -35,7 +36,8 @@ function App() {
         <Navbar scrollPosition={scrollPosition} />
         <FirstSectionHome />
         <SecondSectionHome />
-        <ThirdSectionHome />
+        {/* <ThirdSectionHome /> */}
+        <FourthSection />
       </div>
     </div>
   );

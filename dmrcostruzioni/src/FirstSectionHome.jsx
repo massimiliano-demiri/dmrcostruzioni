@@ -77,14 +77,18 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     beforeChange: handleBeforeChange, // Funzione da eseguire prima che l'immagine cambi
-    afterChange: handleAfterChange // Funzione da eseguire dopo che l'immagine è cambiata
+    afterChange: handleAfterChange, // Funzione da eseguire dopo che l'immagine è cambiata
+    prevArrow: null, // Rimuove il pulsante "Previous"
+    nextArrow: null, // Rimuove il pulsante "Next"
+    arrows: 'false'
   };
 
   const imageStyles = {
     height: `${windowHeight}px`, // Imposta l'altezza dell'immagine in base all'altezza dello schermo
     width: '100%', // Imposta la larghezza dell'immagine al 100%
     objectFit: 'cover', // Assicura che l'immagine si adatti correttamente al contenitore
-    filter: 'sepia(90%) hue-rotate(180deg)' // Applica il filtro di colore
+    filter: 'sepia(90%) hue-rotate(180deg)', // Applica il filtro di colore
+    maxWidth: '100vw'
   };
 
   const logoStyles = {
@@ -96,11 +100,16 @@ const Carousel = () => {
     zIndex: 9999 // Assicura che l'immagine sia sopra al carosello
   };
 
-  const progressBarStyles = {
-    width: `${Math.min(Math.max(loadingProgress, 0), 100)}%`, // Limita la larghezza tra 0% e 100%
-    background: '#90c63d',
-    height: '5px'
-  };
+// Calcola la larghezza della barra di avanzamento in base alla larghezza del componente genitore
+const progressBarStyles = {
+  width: `${(Math.min(Math.max(loadingProgress, 0), 100) / 100) * window.innerWidth}px`, // Larghezza basata sulla larghezza della finestra
+  background: '#90c63d',
+  height: '5px',
+  maxHeight: '5px', // Imposta un'altezza massima
+  right: 0, // Set the right property to 0 to limit the width of the progress bar
+};
+
+  
   
   const arrowContainerStyles = {
     textAlign: 'center',
@@ -125,6 +134,8 @@ const Carousel = () => {
     <div style={{ position: 'relative' }}>
       <img src={logo} alt="Logo" style={logoStyles} /> {/* Aggiunta dell'immagine sopra al carosello */}
       <Slider {...settings}>
+  {/* Contenuto dello slider */}
+
         <div>
           <img src={car1} alt="Immagine 1" style={{ ...imageStyles, filter: 'brightness(70%)' }} />
         </div>
@@ -136,9 +147,9 @@ const Carousel = () => {
         Scorri
         <div style={arrowStyles}><ArrowDown /></div> {/* Inserimento dell'SVG della freccia con stile */}
       </div>
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-        <div style={progressBarStyles}></div>
-      </div>
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, overflow: 'hidden', maxWidth: '100vw' }}>
+  <div style={progressBarStyles}></div>
+</div>
     </div>
   );
 };

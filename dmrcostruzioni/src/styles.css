@@ -15,3 +15,13 @@
     right: 0;
     display: none !important;
   }
+
+
+  
+  .logo-container {
+    display: grid;
+    place-items: center;
+  }
+  
+
+  

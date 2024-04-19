@@ -59,8 +59,8 @@ const TwoSectionLayout = () => {
         </div>
         {/* Colonna centrale con counter */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: "#F4F4F4", padding: '20px 0' }}>
-          <h6 style={{ fontFamily: 'Muli', lineHeight: '1em', letterSpacing: '.02em', color: '#36BCB7', fontSize: '20px', textTransform: 'none', margin: '0', whiteSpace: 'nowrap', marginBottom: '10px' }}>Lavori terminati: </h6>
-          <Counter targetNumber={243} />
+          <h6 style={{ fontFamily: 'Muli', lineHeight: '1em', letterSpacing: '.02em', color: '#36BCB7', fontSize: '20px', textTransform: 'none', margin: '0', whiteSpace: 'nowrap', marginBottom: '10px' }}>Cantieri terminati: </h6>
+          <Counter targetNumber={1332} />
         </div>
         {/* Terza colonna */}
         <div style={{ flex: 1, backgroundColor: "F4F4F4", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '20px', textAlign: 'left' }}>

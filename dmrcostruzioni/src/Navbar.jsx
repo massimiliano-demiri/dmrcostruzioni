@@ -23,9 +23,8 @@ const Navbar = () => {
         className={`w-full z-50 transition-all duration-300 fixed top-0 left-0 right-0 ${isScrolled ? "bg-white text-black" : "bg-transparent text-white"}`}
         style={{ fontFamily: 'Muli', height: "120px", padding: "50px", fontSize: "20px", zIndex: 99999999999 }} // Aumentato il valore di z-index
       >
-        {/* Logo Container */}
-        <div className="flex justify-between items-center h-full mb-4 px-4 transition duration-200">
-          {/* Elementi a sinistra */}
+        {/* Elementi a sinistra */}
+        <div className="flex items-center justify-start h-full px-4">
           <a
             href="#"
             className={`nav-link px-4 py-3 rounded-md text-base font-muli font-medium nav-link relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500  h-full flex items-center`}
@@ -36,17 +35,21 @@ const Navbar = () => {
               <span className="line-after"></span>
             </span>
           </a>
-          
-          {/* Logo Container */}
+        </div>
+        
+        {/* Logo Container */}
+        <div className="flex justify-center items-center h-full px-4">
           <div className="logo-container">
             <img src={logo} alt="Logo" className="logo" />
           </div>
-          
-          {/* Elementi a destra */}
-          <div className="flex items-center">
+        </div>
+        
+        {/* Elementi a destra */}
+        <div className="flex items-center justify-end h-full px-4">
+          <div className="flex items-center h-full"> {/* Aggiunto un contenitore per allineare i link verticalmente */}
             <a
               href="#"
-              className={`px-4 py-3 rounded-md text-base font-muli font-medium  relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500 hover:underline h-full flex items-center`}
+              className={`px-4 py-3 rounded-md text-base font-muli font-medium  relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500 hover:underline`}
             >
               <span className={`relative z-10 ${isScrolled ? "" : "opacity-75"}`}>
                 Galleria
@@ -54,7 +57,7 @@ const Navbar = () => {
             </a>
             <a
               href="#"
-              className={`px-4 py-3 rounded-md text-base font-muli font-medium  relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500 hover:underline h-full flex items-center`}
+              className={`px-4 py-3 rounded-md text-base font-muli font-medium  relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500 hover:underline`}
             >
               <span className={`relative z-10 ${isScrolled ? "" : "opacity-75"}`}>
                 Offerte
@@ -62,7 +65,7 @@ const Navbar = () => {
             </a>
             <a
               href="#"
-              className={`px-4 py-3 rounded-md text-base font-muli font-medium  relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500 hover:underline h-full flex items-center`}
+              className={`px-4 py-3 rounded-md text-base font-muli font-medium  relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500 hover:underline`}
             >
               <span className={`relative z-10 ${isScrolled ? "" : "opacity-75"}`}>
                 Contatti

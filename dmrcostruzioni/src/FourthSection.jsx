@@ -1,31 +1,31 @@
 import React from 'react';
-import carImage from './immagini/car2.jpg'; // Importa l'immagine
+import carImage from './immagini/mok.jpeg'; // Importa l'immagine
 
 const PhotoOverlay = () => {
   const widgetTextStyle = {
     fontFamily: 'Russo One',
-    fontSize: '47px',
+    fontSize: '30px',
     fontWeight: 'normal',
     lineHeight: '1.5',
-    color: '#000000',
+    color: '#616163',
    
   };
 
   const muliTextStyleSpan = {
     fontFamily: 'Muli',
-    fontSize: '47px',
+    fontSize: '30px',
     fontWeight: 'normal',
     lineHeight: '1.5',
-    color: '#000000',
+    color: '#616163',
    
   };
 
   const muliTextStyle = {
     fontFamily: 'Muli',
-    fontSize: '16px',
+    fontSize: '20px',
     fontWeight: 'normal',
     lineHeight: '1.5',
-    color: '#000000',
+    color: '#616163',
   
   };
 
@@ -39,7 +39,7 @@ const PhotoOverlay = () => {
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
-    height: '40px', // Aumenta l'altezza del bottonepaddingLeft: '115px'
+    height: '60px', // Aumenta l'altezza del bottonepaddingLeft: '115px'
     width: '30%'
  
   };
@@ -51,18 +51,18 @@ const PhotoOverlay = () => {
   };
 
   return (
-    <div className="relative h-627" style={{paddingLeft:'115px'}}>
-      <div className="flex justify-end h-full" style={{paddingLeft:'115px'}}>
-        <img src={carImage} alt="Immagine" className="w-3/4 h-full" style={{maxHeight:'627px'}}/>
-        <div className="absolute top-1/2 left-0 pl-10 transform -translate-y-1/2 flex flex-col gap-4 bg-white p-4 rounded-md" style={{ maxWidth: '900px', width: '50%', height: '424px', paddingLeft:'150px', zIndex: '200' }}>
+    <div className="relative" style={{ height: '634.2px' }}>
+      <div className="flex justify-end h-full">
+        <img src={carImage} alt="Immagine" className="w-3/4 h-full" style={{ maxHeight: '634.2px', objectFit: 'cover' }} />
+        <div className="absolute top-1/2 left-0 pl-10 transform -translate-y-1/2 flex flex-col gap-4 bg-white p-4 rounded-md" style={{ maxWidth: '900px', width: '50%', height: '424px', paddingLeft: '150px', zIndex: '200' }}>
           {/* Aggiorna la posizione del wrapper e aggiungi spaziatura */}
           <div style={{ marginLeft: '10px' }}>
             <strong style={widgetTextStyle}>DA OLTRE 20 ANNI</strong>
             <br />
-            <span style={muliTextStyleSpan}>Costruiamo la tua qualità</span>
+            <span style={muliTextStyleSpan}>costruiamo la tua qualità</span>
           </div>
           <p style={{ ...muliTextStyle, marginLeft: '10px' }}>L’esperienza della nostra squadra si combina con l’innovazione tecnologica più avanzata, per soddisfare le tue aspettative con responsabilità, etica e massima serietà.</p>
-          <button style={{ ...buttonStyle, marginLeft: '10px', textAlign:'center'}}>
+          <button style={{ ...buttonStyle, marginLeft: '10px', textAlign: 'center' }}>
             SCOPRI {/*<img src={arrowRightIcon} alt="Freccia destra" style={arrowIconStyle} />*/}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,6 @@ const PhotoOverlay = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              
             >
               <path d="M17 8l4 4m0 0l-4 4m4-4H5"></path>
             </svg>

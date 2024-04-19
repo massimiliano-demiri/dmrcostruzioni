@@ -28,7 +28,7 @@ const TwoSectionLayout = () => {
   return (
     <div style={{ display: "flex", gap:'10px', flexDirection: "column", height: "100vh", backgroundColor: '#F4F4F4', margin: '0 150px 0 150px' }}>
       {/* Prima sezione */}
-      <div style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '15px 0', marginLeft: '-10px', marginBottom: '-320px', height:'calc(50% - 20px)' }}>
+      <div style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '15px 0', marginLeft: '-10px', marginBottom: '-120px', height:'calc(50% - 20px)' }}>
         {/* Colonna "Chi siamo?" */}
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginRight: '20px' }}>
           <h6 style={{ fontFamily: 'Muli', lineHeight: '1em', letterSpacing: '.02em', color: '#36BCB7', fontSize: '20px', textTransform: 'none', margin: '0', transform: 'rotate(-90deg)', whiteSpace: 'nowrap', marginBottom: '100px' }}>Chi siamo?</h6>
@@ -38,8 +38,9 @@ const TwoSectionLayout = () => {
           <h2 style={{ color: '#616163', fontFamily: 'Muli', fontSize: '45px', marginBottom: '1px', textAlign: 'left' }}>Scopri la nostra</h2>
           <h2 style={{ color: '#616163', fontFamily: 'Russo One', fontSize: '45px', marginBottom: '1px', textAlign: 'left' }}>IMPRESA DI</h2>
           <h2 style={{ color: '#616163', fontFamily: 'Russo One', fontSize: '45px', marginBottom: '1px', textAlign: 'left' }}>COSTRUZIONI</h2>
-          <h2 style={{ color: '#96C940', fontFamily: 'Muli', fontSize: '15px', textAlign: 'left' }}>SCOPRI
-            <svg
+          <div style={{display: 'flex'}}>
+          <h2 style={{ color: '#96C940', fontFamily: 'Muli', fontSize: '15px', textAlign: 'left' }}>SCOPRI</h2>
+          <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -53,7 +54,8 @@ const TwoSectionLayout = () => {
             >
               <path d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
-          </h2>
+          </div>
+         
         </div>
         {/* Colonna centrale con counter */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: "#F4F4F4", padding: '20px 0' }}>

@@ -19,12 +19,13 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 left-0 right-0 bg-white text-black" : "absolute bg-transparent text-white"}`}
+      className={`w-full z-50 transition-all duration-300 fixed top-0 left-0 right-0 ${isScrolled ? "bg-white text-black" : "bg-transparent text-white"}`}
       style={{ fontFamily: 'Muli', height: "120px", padding: "50px", fontSize: "20px", zIndex: 99999999999 }} // Aumentato il valore di z-index
     >
       {/* Logo Container */}
       <div className="flex justify-between items-center h-full mb-4 px-4 transition duration-200">
-        <div className=" text-left h-full flex items-center">
+        <div className="flex items-center flex-grow">
+          {/* Elementi a sinistra */}
           <a
             href="#"
             className={`nav-link px-4 py-3 rounded-md  text-base font-muli font-medium nav-link relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500  h-full flex items-center`}
@@ -61,11 +62,16 @@ const Navbar = () => {
             </span>
           </a>
         </div>
-        <div className="text-center">
+        <div className="text-center ,mx-auto">
           <img src={logo} alt="Logo" className="h-21" />
         </div>
-        <div className="text-right h-full flex items-center">
-          <a
+        <div className="text-right h-full flex items-center flex-grow">
+        </div>
+
+  
+
+        <div className="flex items-center flex-grow justify-end">
+        <a
             href="#"
             className={`px-4 py-3 rounded-md text-base font-muli font-medium  relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500 hover:underline h-full flex items-center`}
           >
@@ -97,14 +103,14 @@ const Navbar = () => {
               Contatti
             </span>
           </a>
-          <a
+          {/* <a
             href="#"
             className={`px-4 py-3 rounded-md text-base font-muli font-medium  relative ${isScrolled ? "text-3E3E41" : "text-white"} hover:text-green-500 hover:underline h-full flex items-center`}
           >
             <span className={`relative z-10 ${isScrolled ? "" : "opacity-75"}`}>
-              Contatti Dipendenti
+              Contatti 
             </span>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ const TwoSectionLayout = () => {
   return (
     <div style={{ display: "flex", gap:'10px', flexDirection: "column", height: "100vh", backgroundColor: '#F4F4F4', margin: '0 150px 0 150px' }}>
       {/* Prima sezione */}
-      <div style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '15px 0', marginLeft: '-10px', height:'100%' }}>
+      <div style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '15px 0', marginLeft: '-10px', marginBottom: '-320px', height:'calc(50% - 20px)' }}>
         {/* Colonna "Chi siamo?" */}
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginRight: '20px' }}>
           <h6 style={{ fontFamily: 'Muli', lineHeight: '1em', letterSpacing: '.02em', color: '#36BCB7', fontSize: '20px', textTransform: 'none', margin: '0', transform: 'rotate(-90deg)', whiteSpace: 'nowrap', marginBottom: '100px' }}>Chi siamo?</h6>
@@ -66,8 +66,8 @@ const TwoSectionLayout = () => {
         </div>
       </div>
 
-       {/* Seconda sezione */}
-       <div style={{ display: "flex", flexDirection: "row", height: "50%", backgroundColor: '#F4F4F4' }}>
+      {/* Seconda sezione */}
+      <div style={{ display: "flex", flexDirection: "row", height: "50%", backgroundColor: '#F4F4F4', marginTop: '-20px' }}>
         {/* Mapping delle colonne */}
         {columnsData.map((column, index) => (
           <div key={index} style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '20px 0' }}>

@@ -8,6 +8,7 @@ const PhotoOverlay = () => {
     fontWeight: 'normal',
     lineHeight: '1.5',
     color: '#616163',
+    // marginBottm: '2px'
    
   };
 
@@ -56,10 +57,15 @@ const PhotoOverlay = () => {
         <img src={carImage} alt="Immagine" className="w-3/4 h-full" style={{ maxHeight: '634.2px', objectFit: 'cover' }} />
         <div className="absolute top-1/2 left-0 pl-10 transform -translate-y-1/2 flex flex-col gap-4 bg-white p-4 rounded-md" style={{ maxWidth: '900px', width: '50%', height: '424px', paddingLeft: '150px', zIndex: '200' }}>
           {/* Aggiorna la posizione del wrapper e aggiungi spaziatura */}
-          <div style={{ marginLeft: '10px' }}>
-            <strong style={widgetTextStyle}>DA OLTRE 20 ANNI</strong>
-            <br />
-            <span style={muliTextStyleSpan}>costruiamo la tua qualità</span>
+          <div style={{ marginLeft: '10px', position: 'relative', display: 'flex' }}>
+            <div style={{ writingMode: 'vertical-lr', position: 'absolute', top: '70%', left:'-10px', transform: 'translateY(-50%)', height:'100%' }}>
+              <span style={{ ...widgetTextStyle, fontSize: '13px', textAlign: 'center', color:'#36bcb7' }}>La storia</span>
+            </div>
+            <div style={{ marginLeft: '20px' }}>
+              <strong style={widgetTextStyle}>DA OLTRE 20 ANNI</strong>
+              <br />
+              <span style={muliTextStyleSpan}>costruiamo la tua qualità</span>
+            </div>
           </div>
           <p style={{ ...muliTextStyle, marginLeft: '10px' }}>L’esperienza della nostra squadra si combina con l’innovazione tecnologica più avanzata, per soddisfare le tue aspettative con responsabilità, etica e massima serietà.</p>
           <button style={{ ...buttonStyle, marginLeft: '10px', textAlign: 'center' }}>

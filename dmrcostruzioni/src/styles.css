@@ -106,9 +106,13 @@
   .containerrr {
     display: flex;
     height: 630px;
-    width: 100vw; /* Estende il container orizzontalmente all'interno della finestra del browser */
-    overflow: hidden; /* Per evitare overflow delle colonne */
-    position: relative; /* Assicura che le colonne siano posizionate rispetto a questo container */
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5); /* Opacità di base per il container */
+    background-size: cover;
+    background-repeat: no-repeat; /* Evita che lo sfondo si ripeta */
+    z-index: 100;
   }
   
   .columnnn {
@@ -116,10 +120,20 @@
     height: 100%;
     background-size: cover;
     transition: background 0.3s ease-in-out;
-    opacity: 0; /* Opacità per far trasparire lo sfondo delle colonne */
+    opacity: 1; /* Opacità per far trasparire lo sfondo delle colonne */
+    z-index: -20;
+    background-attachment: fixed;
   }
   
   .columnnn:hover {
-    opacity: 1; /* Al passaggio del mouse, la colonna diventa completamente opaca */
+    opacity: 1; /* Opacità zero al passaggio del mouse sulla colonna */
   }
-    
+  
+  .containerrr:hover .columnnn {
+    opacity: 0; /* Opacità zero al passaggio del mouse su qualsiasi colonna */
+  }
+  
+  .containerrr:hover .columnnn:hover {
+    opacity: 1; /* Opacità uno solo per la colonna attualmente in hover */
+  }
+  

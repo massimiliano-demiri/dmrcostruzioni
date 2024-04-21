@@ -28,22 +28,25 @@ const Container = () => {
     setHoveredColumn(index);
   };
 
+  const handleContainerLeave = () => {
+    setHoveredColumn(null); // Resetta l'indice della colonna quando il mouse esce dal contenitore
+  };
+
   const containerStyle = {
     display: 'flex',
     height: '630px',
-    background: `url(${containerBackgrounds[hoveredColumn]})`,
+    backgroundImage: `url(${containerBackgrounds[hoveredColumn]})`,
     backgroundSize: 'cover',
   };
 
   return (
-    <div className="containerrr" style={containerStyle}>
+    <div className="containerrr" style={containerStyle} onMouseLeave={handleContainerLeave}>
       {columnBackgrounds.map((background, index) => (
         <div
           key={index}
           className="columnnn"
           style={{ backgroundImage: `url(${background})` }}
           onMouseEnter={() => handleColumnHover(index)}
-          onMouseLeave={() => handleColumnHover(null)}
         />
       ))}
     </div>

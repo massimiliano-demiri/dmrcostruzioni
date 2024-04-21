@@ -26,7 +26,7 @@ const TwoSectionLayout = () => {
   ];
 
   return (
-    <div style={{ display: "flex", gap:'10px', flexDirection: "column", height: "100vh", backgroundColor: '#F4F4F4', margin: '0 150px 0 150px' }}>
+    <div style={{ display: "flex", gap:'10px', flexDirection: "column", backgroundColor: '#F4F4F4', margin: '0 150px 0 150px' }}>
       {/* Prima sezione */}
       <div style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '15px 0', marginLeft: '-10px', marginBottom: '-210px', height:'calc(50% - 20px)' }}>
         {/* Colonna "Chi siamo?" */}
@@ -69,7 +69,7 @@ const TwoSectionLayout = () => {
       </div>
 
       {/* Seconda sezione */}
-      <div style={{ display: "flex", flexDirection: "row", height: "50%", backgroundColor: '#F4F4F4', marginTop: '-20px' }}>
+      <div style={{ display: "flex", flexDirection: "row", height: "50%", backgroundColor: '#F4F4F4', marginTop: '180px' }}>
         {/* Mapping delle colonne */}
         {columnsData.map((column, index) => (
           <div key={index} style={{ flex: 1, backgroundColor: '#F4F4F4', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '20px 0' }}>

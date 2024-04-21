@@ -58,7 +58,19 @@ const Container = () => {
           style={{ backgroundImage: `url(${background})` }}
           onMouseEnter={() => handleColumnHover(index)}
         >
-          <div className="text">{columnTexts[index]}</div>
+          {/* Renderizza il testo solo se l'indice non corrisponde a hoveredColumn */}
+          {index !== hoveredColumn && (
+            <div className="text">{columnTexts[index]}</div>
+          )}
+          {/* Renderizza il paragrafo e l'SVG solo se l'indice corrisponde a hoveredColumn */}
+          {index === hoveredColumn && (
+            <div className="hovered-content">
+              <p>Il tuo testo qui</p>
+              <svg>
+                {/* Inserisci qui il tuo SVG */}
+              </svg>
+            </div>
+          )}
         </div>
       ))}
     </div>

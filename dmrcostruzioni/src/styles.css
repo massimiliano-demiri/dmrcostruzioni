@@ -2,158 +2,158 @@
 
 
 @keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-    100% { transform: translateY(0); }
-  }
-  
-  body{
-    background: #f4f4f4;
-  }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
 
-  .slick-next{
-    right: 0;
-    display: none !important;
-  }
+body{
+  background: #f4f4f4;
+}
+
+.slick-next{
+  right: 0;
+  display: none !important;
+}
 
 
-  
-  .logo-container {
-    display: grid;
-    place-items: center;
-  }
-  
-  .flex-container {
-    display: flex;
-    height: 1000px;
-  }
-  
-  .flex-item {
-    flex: 1;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .flex-container {
-    display: flex;
-    width: 100%;
-    height: 100vh; /* Altezza a schermo intero per coprire l'intera pagina */
-    background-size: cover;
-    background-position: center;
-    position: relative; /* Per consentire il posizionamento assoluto delle colonne */
-  }
-  
-  .flex-item {
-    flex: 1;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    position: relative; /* Per consentire il posizionamento assoluto */
-  }
-  
-  .flex-item:hover {
-    z-index: 1; /* Porta la colonna in primo piano */
-  }
 
-  .flex-container {
-    display: flex;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .flex-item {
-    flex: 1;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    opacity: 0.8; /* Opacità per far trasparire lo sfondo principale */
-  }
-  
-  .flex-item:hover {
-    z-index: 1;
-    opacity: 1; /* Al passaggio del mouse, la colonna diventa completamente opaca */
-  }
-  
-  .container {
-    display: flex;
-    height: 630px;
-    width: 100vw; /* Estende il container orizzontalmente all'interno della finestra del browser */
-    overflow: hidden; /* Per evitare overflow delle colonne */
-    position: relative; /* Assicura che le colonne siano posizionate rispetto a questo container */
-  }
-  
-  .column {
-    flex: 1;
-    height: 100%;
-    background-size: cover;
-    transition: background 0.3s ease-in-out;
-    opacity: 0.8; /* Opacità per far trasparire lo sfondo delle colonne */
-  }
-  
-  .column:hover {
-    opacity: 1; /* Al passaggio del mouse, la colonna diventa completamente opaca */
-  }
-  .containerrr {
-    display: flex;
-    height: 630px;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.5); /* Opacità di base per il container */
-    background-size: cover;
-    background-repeat: no-repeat; /* Evita che lo sfondo si ripeta */
-    z-index: 100;
-  }
-  
-  .columnnn {
-    flex: 1;
-    height: 100%;
-    background-size: cover;
-    transition: background 0.3s ease-in-out;
-    opacity: 1; /* Opacità per far trasparire lo sfondo delle colonne */
-    z-index: -20;
-    background-attachment: fixed;
-    position: relative;
-  }
-  
-  .columnnn:hover {
-    opacity: 1; /* Opacità zero al passaggio del mouse sulla colonna */
-  }
-  
-  .containerrr:hover .columnnn {
-    opacity: 0; /* Opacità zero al passaggio del mouse su qualsiasi colonna */
-  }
-  
-  .containerrr:hover .columnnn:hover {
-    opacity: 0; /* Opacità uno solo per la colonna attualmente in hover */
-  }
+.logo-container {
+  display: grid;
+  place-items: center;
+}
 
-  .columnnn .text {
-    position: absolute; /* Posiziona il testo rispetto alla colonna */
-    top: 50%; /* Posiziona il testo a metà dell'altezza della colonna */
-    left: 0; /* Attacca il testo al bordo sinistro della colonna */
-    transform: translateY(-50%) rotate(-90deg); /* Centra verticalmente il testo e lo ruota di 90 gradi in senso antiorario */
-    background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo del box del testo */
-    color: white; /* Colore del testo */
-    padding: 10px; /* Padding del box del testo */
-    white-space: nowrap; /* Evita che il testo vada a capo */
-  }
+.flex-container {
+  display: flex;
+  height: 1000px;
+}
 
-  .text {
-    position: absolute;
-    top: 50%; /* Posiziona il testo verticalmente al centro */
-    left: 5px; /* Posiziona il testo attaccato al bordo sinistro */
-    transform: translateY(-50%) rotate(-90deg); /* Ruota il testo di 90 gradi in senso antiorario */
-    z-index: 200;
-    opacity:1;
-  }
+.flex-item {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Altezza a schermo intero per coprire l'intera pagina */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Per consentire il posizionamento assoluto delle colonne */
+}
+
+.flex-item {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Per consentire il posizionamento assoluto */
+}
+
+.flex-item:hover {
+  z-index: 1; /* Porta la colonna in primo piano */
+}
+
+.flex-container {
+  display: flex;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.flex-item {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  opacity: 0.8; /* Opacità per far trasparire lo sfondo principale */
+}
+
+.flex-item:hover {
+  z-index: 1;
+  opacity: 1; /* Al passaggio del mouse, la colonna diventa completamente opaca */
+}
+
+.container {
+  display: flex;
+  height: 630px;
+  width: 100vw; /* Estende il container orizzontalmente all'interno della finestra del browser */
+  overflow: hidden; /* Per evitare overflow delle colonne */
+  position: relative; /* Assicura che le colonne siano posizionate rispetto a questo container */
+}
+
+.column {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  transition: background 0.3s ease-in-out;
+  opacity: 0.8; /* Opacità per far trasparire lo sfondo delle colonne */
+}
+
+.column:hover {
+  opacity: 1; /* Al passaggio del mouse, la colonna diventa completamente opaca */
+}
+.containerrr {
+  display: flex;
+  height: 630px;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5); /* Opacità di base per il container */
+  background-size: cover;
+  background-repeat: no-repeat; /* Evita che lo sfondo si ripeta */
+  z-index: 100;
+}
+
+.columnnn {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  transition: background 0.3s ease-in-out;
+  opacity: 1; /* Opacità per far trasparire lo sfondo delle colonne */
+  z-index: -20;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.columnnn:hover {
+  background-image: url("./immagini/asp.png") !important; /* Opacità zero al passaggio del mouse sulla colonna */
+}
+
+.containerrr:hover .columnnn {
+  background-image: url("./immagini/asp.png") !important;/* Opacità zero al passaggio del mouse su qualsiasi colonna */
+}
+
+.containerrr:hover .columnnn:hover {
+  background-image: url("./immagini/asp.png") !important;
+}
+
+.columnnn .text {
+  position: absolute; /* Posiziona il testo rispetto alla colonna */
+  top: 50%; /* Posiziona il testo a metà dell'altezza della colonna */
+  left: 0; /* Attacca il testo al bordo sinistro della colonna */
+  transform: translateY(-50%) rotate(-90deg); /* Centra verticalmente il testo e lo ruota di 90 gradi in senso antiorario */
+  background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo del box del testo */
+  color: white; /* Colore del testo */
+  padding: 10px; /* Padding del box del testo */
+  white-space: nowrap; /* Evita che il testo vada a capo */
+}
+
+.text {
+  position: absolute;
+  top: 50%; /* Posiziona il testo verticalmente al centro */
+  left: 5px; /* Posiziona il testo attaccato al bordo sinistro */
+  transform: translateY(-50%) rotate(-90deg); /* Ruota il testo di 90 gradi in senso antiorario */
+  z-index: 200;
+  opacity:1;
+}

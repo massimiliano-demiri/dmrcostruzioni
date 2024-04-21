@@ -23,5 +23,103 @@
     place-items: center;
   }
   
-
+  .flex-container {
+    display: flex;
+    height: 1000px;
+  }
   
+  .flex-item {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .flex-container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Altezza a schermo intero per coprire l'intera pagina */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Per consentire il posizionamento assoluto delle colonne */
+  }
+  
+  .flex-item {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Per consentire il posizionamento assoluto */
+  }
+  
+  .flex-item:hover {
+    z-index: 1; /* Porta la colonna in primo piano */
+  }
+
+  .flex-container {
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .flex-item {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    opacity: 0.8; /* Opacità per far trasparire lo sfondo principale */
+  }
+  
+  .flex-item:hover {
+    z-index: 1;
+    opacity: 1; /* Al passaggio del mouse, la colonna diventa completamente opaca */
+  }
+  
+  .container {
+    display: flex;
+    height: 630px;
+    width: 100vw; /* Estende il container orizzontalmente all'interno della finestra del browser */
+    overflow: hidden; /* Per evitare overflow delle colonne */
+    position: relative; /* Assicura che le colonne siano posizionate rispetto a questo container */
+  }
+  
+  .column {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    transition: background 0.3s ease-in-out;
+    opacity: 0.8; /* Opacità per far trasparire lo sfondo delle colonne */
+  }
+  
+  .column:hover {
+    opacity: 1; /* Al passaggio del mouse, la colonna diventa completamente opaca */
+  }
+  .containerrr {
+    display: flex;
+    height: 630px;
+    width: 100vw; /* Estende il container orizzontalmente all'interno della finestra del browser */
+    overflow: hidden; /* Per evitare overflow delle colonne */
+    position: relative; /* Assicura che le colonne siano posizionate rispetto a questo container */
+  }
+  
+  .columnnn {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    transition: background 0.3s ease-in-out;
+    opacity: 0; /* Opacità per far trasparire lo sfondo delle colonne */
+  }
+  
+  .columnnn:hover {
+    opacity: 1; /* Al passaggio del mouse, la colonna diventa completamente opaca */
+  }
+    

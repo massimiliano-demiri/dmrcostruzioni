@@ -6,6 +6,8 @@ import FirstSectionHome from "./FirstSectionHome"
 import SecondSectionHome from './SecondSectionHome';
 import ThirdSectionHome from './ThirdSectionHome';
 import FourthSection from './FourthSection'
+import FivethSection from './FivethSection'
+import AreeIntervento from './AreeIntervento'
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -38,6 +40,8 @@ function App() {
         <SecondSectionHome />
         {/* <ThirdSectionHome /> */}
         <FourthSection />
+        <FivethSection />
+        <AreeIntervento />
       </div>
     </div>
   );

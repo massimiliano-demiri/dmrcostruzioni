@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExploreComponent = () => {
   const containerStyle = {
-    height: '300px',
+    height: '200px',
     marginTop: '30px',
     display: 'flex',
     // alignItems: 'center',

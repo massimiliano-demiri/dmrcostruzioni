@@ -120,25 +120,31 @@ body{
   height: 100%;
   background-size: cover;
   transition: background 0.3s ease-in-out;
-  opacity: 1; /* Opacità per far trasparire lo sfondo delle colonne */
+  opacity: 1;
   z-index: -20;
   background-attachment: fixed;
   position: relative;
+  display: flex;
+  justify-content: flex-start; /* Allinea il contenuto alla sinistra */
+  align-items: center; /* Centra verticalmente il contenuto */
 }
 
 .columnnn:hover {
-  background-image: url("./immagini/asp.png") !important; /* Opacità zero al passaggio del mouse sulla colonna */
+  background-image: url("./immagini/trasp.png") !important; /* Opacità zero al passaggio del mouse sulla colonna */
+  transition-delay: 2s;
 }
 
 .containerrr:hover .columnnn {
-  background-image: url("./immagini/asp.png") !important;/* Opacità zero al passaggio del mouse su qualsiasi colonna */
+  background-image: url("./immagini/trasp.png") !important;/* Opacità zero al passaggio del mouse su qualsiasi colonna */
+  transition-delay: 2s;
 }
 
 .containerrr:hover .columnnn:hover {
-  background-image: url("./immagini/asp.png") !important;
+  background-image: url("./immagini/trasp.png") !important;
+  transition-delay: 2s;
 }
 
-.columnnn .text {
+.text {
   position: absolute; /* Posiziona il testo rispetto alla colonna */
   top: 50%; /* Posiziona il testo a metà dell'altezza della colonna */
   left: 0; /* Attacca il testo al bordo sinistro della colonna */
@@ -147,13 +153,8 @@ body{
   color: white; /* Colore del testo */
   padding: 10px; /* Padding del box del testo */
   white-space: nowrap; /* Evita che il testo vada a capo */
+  width: 250px;
+  text-align: center;
+  left: -103px;
 }
 
-.text {
-  position: absolute;
-  top: 50%; /* Posiziona il testo verticalmente al centro */
-  left: 5px; /* Posiziona il testo attaccato al bordo sinistro */
-  transform: translateY(-50%) rotate(-90deg); /* Ruota il testo di 90 gradi in senso antiorario */
-  z-index: 200;
-  opacity:1;
-}

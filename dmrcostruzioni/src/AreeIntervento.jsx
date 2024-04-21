@@ -13,8 +13,8 @@ const columnBackgrounds = [
 
 const containerBackgrounds = [
   'https://images.unsplash.com/photo-1565041931867-a1c38590a633?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'path_per_sfondo_container_2.jpg',
-  'path_per_sfondo_container_3.jpg',
+  'https://images.unsplash.com/photo-1713458101343-ae063854e754?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'path_per_sfondo_container_4.jpg',
   'path_per_sfondo_container_5.jpg',
   'path_per_sfondo_container_6.jpg',
@@ -22,13 +22,13 @@ const containerBackgrounds = [
 ];
 
 const columnTexts = [
-  'Testo 1',
-  'Testo 2',
-  'Testo 3',
-  'Testo 4',
-  'Testo 5',
-  'Testo 6',
-  'Testo 7',
+  'Edilizia Residenziale',
+  'Demolizioni',
+  'Edilizia industriale',
+  'Urbanizzazione e infrastrutture',
+  'Opere idrauliche',
+  'Ingegneria naturalistica',
+  'Edilizia civile',
 ];
 
 const Container = () => {

@@ -30,6 +30,37 @@ const columnTexts = [
   'Ingegneria naturalistica',
   'Edilizia civile',
 ];
+const columnTitles = [
+    'Titolo 1',
+    'Titolo 2',
+    'Titolo 3',
+    'Titolo 4',
+    'Titolo 5',
+    'Titolo 6',
+    'Titolo 7',
+  ];
+
+// Array con i testi dei paragrafi per ogni colonna
+const columnParagraphs = [
+  'Testo per la colonna 1.',
+  'Testo per la colonna 2.',
+  'Testo per la colonna 3.',
+  'Testo per la colonna 4.',
+  'Testo per la colonna 5.',
+  'Testo per la colonna 6.',
+  'Testo per la colonna 7.',
+];
+
+// Array con gli SVG per ogni colonna
+const columnSVGs = [
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59 7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12 5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/></svg>,
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3c-3.31 0-6 2.69-6 6 0 2.18 1.19 4.09 3 5.12V17c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-2.88c1.81-1.03 3-2.94 3-5.12 0-3.31-2.69-6-6-6zm4 11c0 1.66-1.34 3-3 3H6c-1.66 0-3-1.34-3-3s1.34-3 3-3h12c1.66 0 3 1.34 3 3zm-6-9c-2.21 0-4 1.79-4 4h8c0-2.21-1.79-4-4-4z"/></svg>,
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17h-2v-6h2v6zm0-8h-2V7h2v4z"/></svg>,
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17h-2v-6h2v6zm0-8h-2V7h2v4z"/></svg>,
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 10H3c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2H21c1.1 0 2-.9 2-2v-6c0-1.1-.89-2-2-2zm0 8H3v-2h18v2zm0-4H3v-2h18v2zm0-4H3V8h18v2z"/></svg>,
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 5H3c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.89 2 1.99 2H21c1.1 0 2-.9 2-2V7c0-1.1-.89-2-2-2zm0 12H3V7h18v10z"/></svg>,
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17h-2v-6h2v6zm0-8h-2V7h2v4z"/></svg>,
+];
 
 const Container = () => {
   const [hoveredColumn, setHoveredColumn] = useState(null);
@@ -65,10 +96,9 @@ const Container = () => {
           {/* Renderizza il paragrafo e l'SVG solo se l'indice corrisponde a hoveredColumn */}
           {index === hoveredColumn && (
             <div className="hovered-content">
-              <p>Il tuo testo qui</p>
-              <svg>
-                {/* Inserisci qui il tuo SVG */}
-              </svg>
+                {columnSVGs[index]}
+             {columnTitles[index]}
+              <p>{columnParagraphs[index]}</p>
             </div>
           )}
         </div>

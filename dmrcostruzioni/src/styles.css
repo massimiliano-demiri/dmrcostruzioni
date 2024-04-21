@@ -123,6 +123,7 @@
     opacity: 1; /* Opacità per far trasparire lo sfondo delle colonne */
     z-index: -20;
     background-attachment: fixed;
+    position: relative;
   }
   
   .columnnn:hover {
@@ -134,6 +135,25 @@
   }
   
   .containerrr:hover .columnnn:hover {
-    opacity: 1; /* Opacità uno solo per la colonna attualmente in hover */
+    opacity: 0; /* Opacità uno solo per la colonna attualmente in hover */
   }
-  
+
+  .columnnn .text {
+    position: absolute; /* Posiziona il testo rispetto alla colonna */
+    top: 50%; /* Posiziona il testo a metà dell'altezza della colonna */
+    left: 0; /* Attacca il testo al bordo sinistro della colonna */
+    transform: translateY(-50%) rotate(-90deg); /* Centra verticalmente il testo e lo ruota di 90 gradi in senso antiorario */
+    background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo del box del testo */
+    color: white; /* Colore del testo */
+    padding: 10px; /* Padding del box del testo */
+    white-space: nowrap; /* Evita che il testo vada a capo */
+  }
+
+  .text {
+    position: absolute;
+    top: 50%; /* Posiziona il testo verticalmente al centro */
+    left: 5px; /* Posiziona il testo attaccato al bordo sinistro */
+    transform: translateY(-50%) rotate(-90deg); /* Ruota il testo di 90 gradi in senso antiorario */
+    z-index: 200;
+    opacity:1;
+  }

@@ -10,6 +10,8 @@ import FivethSection from './FivethSection'
 import AreeIntervento from './AreeIntervento'
 import Timelapse from './Timelapse'
 import Certificazioni from './Certificazioni'
+import ParagrafoHome from './ParagrafoHome';
+// import LavoriHome from './LavoriHome';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -46,6 +48,8 @@ function App() {
         <AreeIntervento />
         <Timelapse videoUrl={'https://www.youtube.com/watch?v=t-qKVR-Figg'}/>
         <Certificazioni />
+        {/* <LavoriHome /> */}
+        <ParagrafoHome />
       </div>
     </div>
   );

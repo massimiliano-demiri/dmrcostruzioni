@@ -170,3 +170,7 @@ body{
   margin-bottom: 10px;
 }
 
+.slick-arrow .slick-prev{
+  background-color: '#96C940';
+  background: 'red';
+}

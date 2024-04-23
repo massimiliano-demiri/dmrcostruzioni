@@ -12,6 +12,7 @@ import Timelapse from './Timelapse'
 import Certificazioni from './Certificazioni'
 import ParagrafoHome from './ParagrafoHome';
 // import LavoriHome from './LavoriHome';
+import ServiziHome from './ServiziHome'
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -50,6 +51,7 @@ function App() {
         <Certificazioni />
         {/* <LavoriHome /> */}
         <ParagrafoHome />
+        <ServiziHome />
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const LavoriHome = () => {
       alignItems: 'center',
       justifyContent: 'start',
       fontFamily: 'Muli, sans-serif', // Applica il font Muli a tutti gli elementi figlio
-      marginTop: '80px',
+      marginTop: '190px',
       marginLeft: '50px'
     };
   

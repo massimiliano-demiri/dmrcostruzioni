@@ -174,3 +174,218 @@ body{
   background-color: '#96C940';
   background: 'red';
 }
+
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Spazio tra le righe */
+}
+
+.image {
+  width: 30%; /* Larghezza delle immagini */
+  height: auto;
+}
+
+.overlay{
+  width: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 300px; /* Imposta la larghezza desiderata */
+  margin-right: 10px; /* Aggiungi margine destro per spaziatura tra le immagini */
+}
+
+.image-container .overlay {
+  position: absolute;
+  bottom: -100px; /* Altezza del rettangolo bianco */
+  left: 0;
+  background-color: #ffffff;
+  width: 100%; /* Larghezza del rettangolo uguale alla larghezza del contenitore */
+  padding: 20px;
+  display: none;
+}
+
+.image-container:hover .overlay {
+  display: block;
+}
+
+.image {
+  width: 50%; /* Riempie completamente il contenitore */
+  height: auto;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Per consentire il posizionamento relativo */
+  margin-right: 10px; /* Aggiungi margine destro per spaziatura tra le immagini */
+  width: 500px;
+  /* height: 500px; */
+}
+
+.image-container .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto; /* Larghezza del rettangolo uguale alla larghezza dell'immagine */
+  background-color: rgba(255, 255, 255, 0.8); /* Usiamo un colore con trasparenza */
+  padding: 10px; /* Aggiungi spazio intorno al contenuto dell'overlay */
+  box-sizing: border-box; /* Assicurati che il padding sia incluso nella larghezza */
+  transform: translateY(100%); /* Sposta l'overlay sotto l'immagine */
+  transition: transform 0.3s ease; /* Aggiungi una transizione per una visualizzazione fluida */
+  opacity: 0; /* Nascondi l'overlay di default */
+  margin-left: 15px;
+
+}
+
+.image-container:hover .overlay {
+  transform: translateY(0); /* Mostra l'overlay quando passi il mouse sopra l'immagine */
+  opacity: 1; /* Rendi visibile l'overlay */
+}
+
+.image {
+  width: 100%; /* Larghezza massima dell'immagine all'interno del contenitore */
+  height: 80%; /* Altezza automatica per mantenere le proporzioni */
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  opacity: 0;
+}
+
+.image-container:hover .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px; /* Aggiungi padding per spaziatura intorno al contenuto dell'overlay */
+  box-sizing: border-box; /* Assicura che il padding sia incluso nella larghezza e altezza */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Aggiungi una transizione per una visualizzazione fluida */
+  pointer-events: none; /* Assicura che l'overlay non interferisca con gli eventi del mouse sull'immagine */
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  pointer-events: auto; /* Rendi l'overlay cliccabile */
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px; /* Aggiungi padding per spaziatura intorno al contenuto dell'overlay */
+  box-sizing: border-box; /* Assicura che il padding sia incluso nella larghezza e altezza */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Aggiungi una transizione per una visualizzazione fluida */
+  pointer-events: none; /* Assicura che l'overlay non interferisca con gli eventi del mouse sull'immagine */
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  pointer-events: auto; /* Rendi l'overlay cliccabile */
+}
+
+.overlay h3, .overlay p {
+  margin: 0; /* Rimuovi il margine predefinito */
+}
+
+.overlay {
+  max-width: 100%; /* Larghezza massima uguale a quella dell'immagine */
+  width: auto; /* Larghezza dinamica in base al contenuto */
+  max-height: 90px; /* Altezza massima uguale a quella dell'immagine meno il doppio del padding */
+  overflow: auto; /* Aggiungi scroll se il contenuto è troppo lungo */
+  height: auto;
+  margin-top: 500px;
+}
+
+
+/* styles.css */
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease; /* Aggiungi transizione per l'effetto di traslazione */
+}
+
+/* Aggiungi traslazione all'immagine al passaggio del mouse */
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Inizialmente larghezza zero per l'effetto di riempimento */
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: width 0.3s ease; /* Aggiungi transizione per l'effetto di riempimento */
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Apertura dell'overlay con transizione */
+.image-container:hover .overlay {
+  width: 100%; /* Larghezza completa per riempire l'intero contenitore */
+  opacity: 1;
+}
+
+.cont{
+  position: relative;
+  margin-top: 70px;
+}
+
+
+

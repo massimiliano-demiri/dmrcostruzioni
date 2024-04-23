@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
-import immagineAias from './immagini/aias.jpg';
-import immagineBlu from './immagini/ias_blu.png';
-import immagineRosso from './immagini/ias_rosso.png';
-import immagineVerde from './immagini/ias_verde.png';
-import immagineDefault from './immagini/images.png';
+import immagineAias from './immagini/1.png';
+import immagineBlu from './immagini/2.png';
+import immagineRosso from './immagini/3.png';
+import immagineVerde from './immagini/4.png';
+import immagineDefault from './immagini/5.png';
 import './styles.css';
 
 const ImmaginiSlider = () => {

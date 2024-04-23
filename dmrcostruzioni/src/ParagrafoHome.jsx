@@ -52,7 +52,7 @@ const ParagrafoHome = () => {
   };
 
   return (
-    <div className="relative" style={{ height: '634.2px' }}>
+    <div className="cont" style={{ height: '634.2px' }}>
       <div className="flex justify-end h-full">
         <div className="absolute top-1/2 right-0 pr-10 transform -translate-y-1/2 flex flex-col gap-4 bg-white p-4 rounded-md" style={{ maxWidth: '900px', width: '50%', height: '424px', paddingRight: '150px', zIndex: '200' }}>
           {/* Aggiorna la posizione del wrapper e aggiungi spaziatura */}
